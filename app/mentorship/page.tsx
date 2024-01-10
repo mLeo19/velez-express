@@ -35,7 +35,7 @@ export default function Mentorship() {
   let pricingHeading = "Simple no-tricks pricing"
   let pricingTitle = " With tailored guidance, continuous skill development, networking opportunities, and exclusive resources, you'll navigate the road to success with confidence and expertise"
   let pricingSubHeading = "Lifetime membership"
-  let pricingSubTitle = "Accelerate Your Success: Elevate your cargo van business with our mentorship program."
+  let pricingSubTitle = "Accelerate Your Success: Elevate your cargo van business with our exclusive mentorship program."
   let pricingFeatures = [
     {
       title: "Personalized Guidance",
