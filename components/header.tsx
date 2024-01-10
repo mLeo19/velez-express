@@ -1,13 +1,28 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useRouter } from "next/navigation";
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
+
+  const router = useRouter();
+  const path = usePathname();
+
+// detect route change with useEffect dependency
+useEffect(() => {
+    console.log('Current route: ', path);
+    // made sure active tab is on services if user refreshes on a service page, the bug was making the active section Home after refreshing
+    if (path==='/mentorship' || path ==='/guide' || path ==='/shipping') {
+      setActiveSection("Services")
+    }
+}, [router]);
+
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
   return (
