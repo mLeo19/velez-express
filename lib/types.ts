@@ -21,6 +21,6 @@ export type PricingProps = {
   features: {
     title: string,
   }[];
-  price: string;
+  price: number;
 }
   

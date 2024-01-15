@@ -2,6 +2,7 @@ import React from 'react'
 import { IconType } from 'react-icons';
 import { FaCheck } from "react-icons/fa";
 import { PricingProps } from '@/lib/types';
+import CheckoutForm from './checkout-form';
 
 export const Pricing = ({heading, title, subTitle, subHeading, features, price} : PricingProps) => {
   return (
@@ -39,16 +40,7 @@ export const Pricing = ({heading, title, subTitle, subHeading, features, price} 
             <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
               <div className="mx-auto max-w-xs px-8">
                 <p className="text-base font-semibold text-gray-600">Pay once, own it forever</p>
-                <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                  <span className="text-5xl font-bold tracking-tight text-gray-900">{price}</span>
-                  <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
-                </p>
-                <a
-                  href="#"
-                  className="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Get access
-                </a>
+                <CheckoutForm price={price}/>
                 <p className="mt-6 text-xs leading-5 text-gray-600">
                   Invoices and receipts available for easy company reimbursement
                 </p>
