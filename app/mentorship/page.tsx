@@ -50,7 +50,7 @@ export default function Mentorship() {
       title: "Exclusive Resources"
     }
   ]
-  let price = 1
+  let price = 600
 
     return (
       <div className="flex flex-col items-center px-4">
