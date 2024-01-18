@@ -18,7 +18,7 @@ export default function Header() {
 useEffect(() => {
     console.log('Current route: ', path);
     // made sure active tab is on services if user refreshes on a service page, the bug was making the active section Home after refreshing
-    if (path==='/mentorship' || path ==='/guide' || path ==='/shipping') {
+    if (path.includes('/mentorship') || path.includes('/guide') || path.includes('/shipping')) {
       setActiveSection("Services")
     }
 }, [router]);

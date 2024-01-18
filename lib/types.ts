@@ -23,4 +23,9 @@ export type PricingProps = {
   }[];
   price: number;
 }
+
+export type ReceiptProps = {
+  c_email : string;
+  c_name : string; 
+}
   
