@@ -35,7 +35,7 @@ export default function Service({
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <Link
+      <a
         href={href}
         onClick={() => {
           setActiveSection("Services");
@@ -78,7 +78,7 @@ export default function Service({
         group-even:right-[initial] group-even:-left-40"
         />
       </section>
-      </Link>
+      </a>
     </motion.div>
   );
 }

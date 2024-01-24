@@ -61,7 +61,7 @@ export default function Guide() {
   return (
     <div className="flex flex-col items-center px-4">
       <ServiceHero heading={heading} title={title} features={features}/>
-      <Pricing heading={pricingHeading} title={pricingTitle} subTitle={pricingSubTitle} subHeading={pricingSubHeading} features={pricingFeatures} price={price}/>
+      <Pricing service="/guide" heading={pricingHeading} title={pricingTitle} subTitle={pricingSubTitle} subHeading={pricingSubHeading} features={pricingFeatures} price={price}/>
     </div>
   )
 }

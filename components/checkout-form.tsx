@@ -8,8 +8,9 @@ import React, { useState } from "react";
 import { formatAmountForDisplay } from "@/lib/stripe-helpers";
 import * as config from "@/config";
 import { createCheckoutSession } from "@/actions/stripe";
+import { BsArrowRight } from "react-icons/bs";
 
-export default function CheckoutForm({price} : {price: number}): JSX.Element {
+export default function CheckoutForm({price, service} : {price: number, service: string}): JSX.Element {
   const [loading] = useState<boolean>(false);
   /*const [input, setInput] = useState<{ customDonation: number }>({
     customDonation: Math.round(config.MAX_AMOUNT / config.AMOUNT_STEP),
@@ -39,14 +40,15 @@ export default function CheckoutForm({price} : {price: number}): JSX.Element {
       */}
       <label className="mt-6 flex items-center justify-center gap-x-2">
         <input name="price" value={price} readOnly className="font-bold bg-transparent tracking-tight outline-none text-5xl text-center w-[7rem]" />
+        <input type="hidden" name="service" value={service} />
         <span className="text-sm font-semibold leading-6 tracking-wide">USD</span>
       </label>
       <button
-        className="mt-8 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        className="mt-8 mx-auto group dark:bg-gray-950 bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 border border-white/10 hover:bg-gray-950 active:scale-105 transition"
         type="submit"
         disabled={loading}
       >
-        Get Access
+        Get Access{" "}<BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
       </button>
     </form>
   );

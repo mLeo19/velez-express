@@ -130,13 +130,13 @@ export const whyChooseUsData = [
 export const testimonials = [
   {
     img: '/testimonial-1.jpg',
-    quote: "This company exceeded my expectations. Professional, efficient, and top-quality work for my new AC Unit",
+    quote: "This company exceeded my expectations. Professional, efficient, and top-quality work for our required goods.",
     name: 'Frank J',
     role: 'AMD Inc.'
   },
   {
     img: '/testimonial-2.jpg',
-    quote: "I was provided with much more breatheable air in our office . Trustworthy and skilled team.",
+    quote: "I was provided with a clear roadmap on how to start in this industry. Trustworthy and skilled team.",
     name: 'Nick V',
     role: 'Malika Inc.'
   },

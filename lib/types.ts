@@ -14,6 +14,7 @@ export type ServiceHeroProps = {
 };
 
 export type PricingProps = {
+  service: string;
   heading: string;
   title: string;
   subTitle: string;

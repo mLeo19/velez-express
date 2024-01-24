@@ -1,3 +1,4 @@
+
 import { Pricing } from "@/components/pricing";
 import ServiceHero from "@/components/service-hero";
 import { FaBook } from "react-icons/fa";
@@ -5,6 +6,7 @@ import { PiStudentBold } from "react-icons/pi";
 import { TbNetwork } from "react-icons/tb";
 import { HiMagnifyingGlassCircle } from "react-icons/hi2";
 import { MdMenuBook } from "react-icons/md";
+import  VideoPlayer from "@/components/video-player";
 
 export default function Mentorship() {
   let heading = "Get All The Necessary Guidance"
@@ -55,7 +57,8 @@ export default function Mentorship() {
     return (
       <div className="flex flex-col items-center px-4">
         <ServiceHero heading={heading} title={title} features={features}/>
-        <Pricing heading={pricingHeading} title={pricingTitle} subTitle={pricingSubTitle} subHeading={pricingSubHeading} features={pricingFeatures} price={price}/>
+        
+        <Pricing service="/mentorship" heading={pricingHeading} title={pricingTitle} subTitle={pricingSubTitle} subHeading={pricingSubHeading} features={pricingFeatures} price={price}/>
       </div>
     )
   }

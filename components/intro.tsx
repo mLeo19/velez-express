@@ -64,7 +64,7 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Welcome to Velez Express</span>, where{" "}
-        <span className="font-bold">22 year old entrepreneur Marlon</span> excels in{" "}
+        <span className="font-bold">22 year old Marlon</span> excels in{" "}
         <span className="underline">nationwide</span> cargo van deliveries. Explore 
         his <span className="italic">journey</span>, hire reliable{" "}
         <span className="italic">services</span>, and gain valuable <span className="italic">insights</span> into industry logistics.

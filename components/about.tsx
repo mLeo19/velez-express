@@ -22,7 +22,7 @@ export default function About() {
       <p className="mb-3">
         Meet Marlon, the visionary 22-year-old behind{" "}
         <span className="font-medium">Velez Express</span>, hailing from the vibrant 
-        city of <span className="underline">West Palm Beach, FL</span>. Marlon's story 
+        city of <span className="underline">West Palm Beach, FL</span>. His story 
         is one of resilience and entrepreneurial spirit, crafting Velez Express from 
         the <span className="font-medium">ground up</span> into 
         a <span className="font-medium">thriving</span> cargo van delivery business that 
@@ -35,7 +35,7 @@ export default function About() {
         <span className="font-medium">entrepreneurial journey</span>, we are here 
         for you. With a genuine  <span className="italic">love</span> for{" "}
         <span className="italic">helping</span> clients and aspiring entrepreneurs alike, 
-        Marlon extends a warm invitation to <span className="underline">anyone with aspirations</span> of 
+        we extend a warm invitation to <span className="underline">anyone with aspirations</span> of 
         creating their own <span className="font-medium">cargo van delivery businesses</span>. Join us 
         at Velez Express, where success isn't just a destination - it's a journey we embark 
         on <span className="underline">together</span>, <span className="font-medium">turning dreams into thriving ventures</span>.

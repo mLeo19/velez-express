@@ -28,7 +28,7 @@ export default async function ResultPage({
 
 
   const formattedContent: string = JSON.stringify(checkoutSession, null, 2);
-  console.log(formattedContent)
+  
 
   return (
     <section className="mb-28 max-w-[50rem] text-center sm:mb-8 pt-28 sm:pt-36 flex justify-center items-center mx-auto">
