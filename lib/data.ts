@@ -142,7 +142,7 @@ export const testimonials = [
   },
   {
     img: '/testimonial-3.jpg',
-    quote: "Highly recommended! Seamless AC maintanance for my new project.",
+    quote: "Highly recommended! Seamless delivery at reasonable prices for my startup company",
     name: 'Amelia W',
     role: 'SE Restoration'
   }
