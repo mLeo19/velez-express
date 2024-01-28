@@ -39,7 +39,7 @@ export default function CheckoutForm({price, service} : {price: number, service:
       />
       */}
       <label className="mt-6 flex items-center justify-center gap-x-2">
-        <input name="price" value={price} readOnly className="font-bold bg-transparent tracking-tight outline-none text-5xl text-center w-[7rem]" />
+        <input name="price" value={price} readOnly className="font-bold bg-transparent tracking-tight outline-none text-5xl text-center w-[10rem]" />
         <input type="hidden" name="service" value={service} />
         <span className="text-sm font-semibold leading-6 tracking-wide">USD</span>
       </label>

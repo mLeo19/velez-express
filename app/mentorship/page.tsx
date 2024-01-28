@@ -36,8 +36,8 @@ export default function Mentorship() {
 
   let pricingHeading = "Simple no-tricks pricing"
   let pricingTitle = " With tailored guidance, continuous skill development, networking opportunities, and exclusive resources, you'll navigate the road to success with confidence and expertise"
-  let pricingSubHeading = "Lifetime membership"
-  let pricingSubTitle = "Accelerate Your Success: Elevate your cargo van business with our exclusive mentorship program."
+  let pricingSubHeading = "One-on-One Mentorship"
+  let pricingSubTitle = "Price reflects our mentorship price plus online payment fees"
   let pricingFeatures = [
     {
       title: "Personalized Guidance",
@@ -52,7 +52,7 @@ export default function Mentorship() {
       title: "Exclusive Resources"
     }
   ]
-  let price = 600
+  let price = 618.23
 
     return (
       <div className="flex flex-col items-center px-4">

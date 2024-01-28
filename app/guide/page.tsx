@@ -41,7 +41,7 @@ export default function Guide() {
   let pricingHeading = "Simple no-tricks pricing"
   let pricingTitle = "Packed with step-by-step instructions, industry insights, and resource optimization tips, this guide is your roadmap to launching and growing a successful cargo van business"
   let pricingSubHeading = "Complete Step-By-Step Guide"
-  let pricingSubTitle = "Invest in the Cargo Van Hustle Guide today and gain the knowledge and strategies needed to build a thriving business from the ground up"
+  let pricingSubTitle = "Price reflects our mentorship price plus online payment fees"
   let pricingFeatures = [
     {
       title: "Comprehensive Learning Material",
@@ -56,7 +56,7 @@ export default function Guide() {
       title: "Ongoing Support and Updates"
     }
   ]
-  let price = 300
+  let price = 309.27
 
   return (
     <div className="flex flex-col items-center px-4">
