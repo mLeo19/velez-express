@@ -13,6 +13,17 @@ export type ServiceHeroProps = {
   }[];
 };
 
+export type ShippingHeroProps = {
+  heading: string;
+  title: string;
+  description: string;
+  features: {
+    title : string,
+    description: string,
+    icon: React.ReactNode,
+  }[];
+};
+
 export type PricingProps = {
   service: string;
   heading: string;
