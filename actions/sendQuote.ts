@@ -58,8 +58,8 @@ export const sendQuote = async (formData: FormData) => {
   let data;
   try {
     data = await resend.emails.send({
-      from: "Send Quote Form <mail@velezexpressllc.com>",
-      to: "velezexpress7@gmail.com",
+      from: "Send Quote Form <onboarding@resend.dev>",
+      to: "delivered@resend.dev",
       subject: "Message from send quote form",
       reply_to: senderEmail,
       react: React.createElement(RequestQuoteEmail, {
