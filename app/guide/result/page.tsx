@@ -48,7 +48,7 @@ export default async function ResultPage({
 
         {/* Receipt */}
         
-        <Receipt c_email={customerEmail} c_name={customerName} c_paid="$669.72" c_service="mentorship"/>
+        <Receipt c_email={customerEmail} c_name={customerName} c_paid="$360.76" c_service="guide"/>
         
         
       </div>

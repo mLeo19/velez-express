@@ -38,6 +38,8 @@ export type PricingProps = {
 
 export type ReceiptProps = {
   c_email : string;
-  c_name : string; 
+  c_name : string;
+  c_paid : string;
+  c_service : string; 
 }
   

@@ -12,6 +12,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 export default function CheckoutForm({price, service} : {price: number, service: string}): JSX.Element {
   const [loading] = useState<boolean>(false);
+  let priceString = '$ ' + Math.round(price * 100) / 100;
   /*const [input, setInput] = useState<{ customDonation: number }>({
     customDonation: Math.round(config.MAX_AMOUNT / config.AMOUNT_STEP),
   });*/
@@ -38,11 +39,13 @@ export default function CheckoutForm({price, service} : {price: number, service:
         value={input.customDonation}
       />
       */}
-      <label className="mt-6 flex items-center justify-center gap-x-2">
-        <input name="price" value={price} readOnly className="font-bold bg-transparent tracking-tight outline-none text-5xl text-center w-[10rem]" />
+      <div className=" mt-6 flex items-center justify-center gap-x-2 relative">
+        <div className="w-full font-bold bg-transparent outline-none text-5xl text-center">
+          {priceString}
+        </div>
         <input type="hidden" name="service" value={service} />
-        <span className="text-sm font-semibold leading-6 tracking-wide">USD</span>
-      </label>
+        <input type="hidden" name="price" value={price}/>
+      </div>
       <button
         className="mt-8 mx-auto group dark:bg-gray-950 bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 border border-white/10 hover:bg-gray-950 active:scale-105 transition"
         type="submit"
