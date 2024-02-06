@@ -12,7 +12,12 @@ export const sendQuote = async (formData: FormData) => {
   const senderTo = formData.get("to");
   const senderDate = formData.get("date");
   const senderName = formData.get("name");
-  const senderNumber = formData.get("number")
+  const senderNumber = formData.get("number");
+  const senderDescription = formData.get("description");
+  const senderPounds = formData.get("pounds");
+  const senderWidth = formData.get("width");
+  const senderLength = formData.get("length");
+  const senderHeight = formData.get("height");
 
   // simple server-side validation
   if (!validateString(senderEmail, 500)) {
@@ -50,6 +55,36 @@ export const sendQuote = async (formData: FormData) => {
     };
   }
 
+  if (!validateString(senderDescription, 5000)) {
+    return {
+      error: "Invalid sender description",
+    };
+  }
+
+  if (!validateString(senderPounds, 5000)) {
+    return {
+      error: "Invalid sender pounds",
+    };
+  }
+
+  if (!validateString(senderWidth, 5000)) {
+    return {
+      error: "Invalid sender width",
+    };
+  }
+
+  if (!validateString(senderLength, 5000)) {
+    return {
+      error: "Invalid sender length",
+    };
+  }
+
+  if (!validateString(senderHeight, 5000)) {
+    return {
+      error: "Invalid sender height",
+    };
+  }
+
 
 
   // onboarding@resend.dev
@@ -69,6 +104,11 @@ export const sendQuote = async (formData: FormData) => {
         senderDate: senderDate,
         senderName: senderName,
         senderNumber: senderNumber,
+        senderDescription: senderDescription,
+        senderPounds: senderPounds,
+        senderWidth: senderWidth,
+        senderLength: senderLength,
+        senderHeight: senderHeight,
       }),
     });
   } catch (error: unknown) {

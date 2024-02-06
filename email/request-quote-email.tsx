@@ -19,6 +19,11 @@ type RequestQuoteEmailProps = {
   senderDate: string;
   senderName: string;
   senderNumber: string;
+  senderDescription: string,
+  senderPounds: string,
+  senderWidth: string,
+  senderLength: string,
+  senderHeight: string,
 };
 
 export default function RequestQuoteEmail({
@@ -27,7 +32,12 @@ export default function RequestQuoteEmail({
   senderTo,
   senderDate,
   senderName,
-  senderNumber
+  senderNumber,
+  senderDescription,
+  senderPounds,
+  senderWidth,
+  senderLength,
+  senderHeight,
 }: RequestQuoteEmailProps) {
   return (
     <Html>
@@ -51,6 +61,16 @@ export default function RequestQuoteEmail({
               <Text>The sender will transport to: {senderTo}</Text>
               <Hr />
               <Text>The sender's first available date is: {senderDate}</Text>
+              <Hr />
+              <Text>The sender's load description is: {senderDescription}</Text>
+              <Hr />
+              <Text>The sender's load weight in pounds is: {senderPounds}</Text>
+              <Hr />
+              <Text>The sender's load width is: {senderWidth}</Text>
+              <Hr />
+              <Text>The sender's load length is: {senderLength}</Text>
+              <Hr />
+              <Text>The sender's load height is: {senderHeight}</Text>
             </Section>
           </Container>
         </Body>
