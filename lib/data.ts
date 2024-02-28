@@ -8,6 +8,7 @@ import wordanalyticsImg from "@/public/wordanalytics.png";
 import completeGuide from "@/public/complete-guide.jpg";
 import mentorship from "@/public/mentorship.jpg";
 import shipping from "@/public/shipping.jpg";
+import privateMentorship from "@/public/private-mentorship.jpg"
 import { BsFillCalendar2CheckFill } from "react-icons/bs";
 import { FaMoneyBill } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
@@ -67,6 +68,14 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Shipping",
+    href: "/shipping",
+    description:
+      "Obtain reliable and timely deliveries for your business equipment needs through transparent pricing and top-tier customer service.",
+    tags: ["Product Safety", "Quick Delivery", "24/7 Live Support"],
+    imageUrl: shipping,
+  },
+  {
     title: "Complete Guide",
     href: "/guide",
     description:
@@ -83,12 +92,12 @@ export const projectsData = [
     imageUrl: mentorship,
   },
   {
-    title: "Shipping",
-    href: "/shipping",
+    title: "Private Mentorship",
+    href: "/private-mentorship",
     description:
-      "Obtain reliable and timely deliveries for your business equipment needs through transparent pricing and top-tier customer service.",
-    tags: ["Product Safety", "Quick Delivery", "24/7 Live Support"],
-    imageUrl: shipping,
+      "Direct access to Marlon for tailored guidance, extensive skill development, elite networking opportunities, and more!",
+    tags: ["24/7 Live Support", "Vip Mentorship", "Personalized Guidance"],
+    imageUrl: privateMentorship,
   },
 ] as const;
 
