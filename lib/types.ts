@@ -34,6 +34,7 @@ export type PricingProps = {
     title: string,
   }[];
   price: number;
+  beforeDiscount: null | number;
 }
 
 export type ReceiptProps = {

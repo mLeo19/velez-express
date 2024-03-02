@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { Transition } from '@headlessui/react'
 import { testimonials } from '@/lib/data'
+import LazyYoutube from './lazy-youtube'
 
 export default function TestimonialWheel() {
   const testimonialsRef = useRef<HTMLDivElement>(null)
@@ -29,17 +30,17 @@ export default function TestimonialWheel() {
   }, [])  
 
   return (
-    <div className='py-16'>
+    <div className='pb-16 pt-8 '>
       <div className="w-full relative  max-w-3xl mx-auto text-center px-4 sm:px-8 md:px-16">
         {/* Testimonial image */}
-        <div className="relative h-32">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-b before:from-blue-500/75 before:via-blue-500/5 before:via-25% before:to-blue-500/0 before:to-75% before:rounded-full before:-z-10">
-            <div className="h-32 [mask-image:_linear-gradient(0deg,transparent,theme(colors.white)_20%,theme(colors.white))]">
+        <div className="relative h-[400px] ">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2  max-w-[35rem] w-full h-[400px]  before:absolute before:-z-10">
+            <div className="h-full  ">
               {testimonials.map((testimonial, index) => (
                 <Transition
                 key={index}
                 show={active === index}
-                className="absolute inset-0 h-full -z-10"
+                className="absolute inset-0 h-full z-10"
                 enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
                 enterFrom="opacity-0 -rotate-[60deg]"
                 enterTo="opacity-100 rotate-0"
@@ -47,15 +48,26 @@ export default function TestimonialWheel() {
                 leaveFrom="opacity-100 rotate-0"
                 leaveTo="opacity-0 rotate-[60deg]"
                 >
-                  <Image className="relative top-11 left-1/2 -translate-x-1/2 rounded-full" src={testimonial.img} width={56} height={56} alt={testimonial.name} />
+                  
+                  <div className="h-[400px]">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src={`https://www.youtube.com/embed/${testimonial.vidId}`}
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="rounded-xl h-full "
+                    ></iframe>
+                  </div>
                 </Transition>
               ))}          
             </div>
           </div>
         </div>
         {/* Text */}
-        <div className="mb-9 transition-all duration-150 delay-300 ease-in-out">
-          <div className="relative flex flex-col" ref={testimonialsRef}>
+        <div className=" h-fit my-9 md:mb-3 transition-all duration-150 delay-300 ease-in-out">
+          <div className="relative flex flex-col  text-wrap" ref={testimonialsRef}>
           {testimonials.map((testimonial, index) => (
             <Transition
               key={index}
@@ -75,7 +87,7 @@ export default function TestimonialWheel() {
         </div>
       </div>
       {/* Buttons */}
-      <div className="flex flex-wrap justify-center z-30">
+      <div className="flex flex-wrap justify-center z-50 ">
 
         {testimonials.map((testimonial, index) => (
           <button

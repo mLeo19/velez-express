@@ -58,7 +58,7 @@ export default function Mentorship() {
       <div className="flex flex-col items-center px-4">
         <ServiceHero heading={heading} title={title} features={features}/>
         
-        <Pricing service="/mentorship" heading={pricingHeading} title={pricingTitle} subTitle={pricingSubTitle} subHeading={pricingSubHeading} features={pricingFeatures} price={price}/>
+        <Pricing service="/mentorship" heading={pricingHeading} title={pricingTitle} subTitle={pricingSubTitle} subHeading={pricingSubHeading} features={pricingFeatures} price={price} beforeDiscount={null}/>
       </div>
     )
   }

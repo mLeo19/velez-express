@@ -4,7 +4,7 @@ import { FaCheck } from "react-icons/fa";
 import { PricingProps } from '@/lib/types';
 import CheckoutForm from './checkout-form';
 
-export const Pricing = ({service, heading, title, subTitle, subHeading, features, price} : PricingProps) => {
+export const Pricing = ({service, heading, title, subTitle, subHeading, features, price, beforeDiscount} : PricingProps) => {
   let fees = ((price + 0.3) / (1 - 0.029)) - price;
   let roundedFees = Math.round(fees * 100) / 100;
   return (
@@ -41,7 +41,22 @@ export const Pricing = ({service, heading, title, subTitle, subHeading, features
           <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
             <div className="rounded-2xl bg-transparent py-10 text-center ring-1 ring-inset ring-gray-900/5 dark:ring-gray-500/50 lg:flex lg:flex-col lg:justify-center lg:py-16">
               <div className="mx-auto max-w-xs px-4 ">
-                <div className='flex  justify-between w-full '>
+                {/* Check if discount should be displayed */}
+                {beforeDiscount ? (
+                  <div className='flex  justify-between w-full '>
+                  <div className='text-left'>
+                    <p className=" text-base font-semibold text-red-600 dark:text-red-700">Original Price</p>
+                    <p className=" text-xl font-semibold ">Limited Time Offer</p>
+                    <p className="text-base font-semibold "> Transaction Fees</p>
+                  </div>
+                  <div className='text-right'>
+                    <p className=" text-base font-semibold text-red-600 dark:text-red-700">${beforeDiscount}</p>
+                    <p className=" text-xl font-semibold ">${price}</p>
+                    <p className=" text-base font-semibold ">+ ${roundedFees}</p>
+                  </div>
+                </div>
+                ) : (
+                  <div className='flex  justify-between w-full '>
                   <div className='text-left'>
                     <p className=" text-xl font-semibold ">Price</p>
                     <p className="text-base font-semibold "> Transaction Fees</p>
@@ -51,6 +66,8 @@ export const Pricing = ({service, heading, title, subTitle, subHeading, features
                     <p className=" text-xl font-semibold ">+ ${roundedFees}</p>
                   </div>
                 </div>
+                )}
+                
                 <CheckoutForm price={price + fees} service={service}/>
                 <p className="mt-6 text-xs leading-5 text-gray-600">
                   Invoices and receipts available for easy company reimbursement

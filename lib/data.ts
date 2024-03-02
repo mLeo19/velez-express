@@ -139,20 +139,23 @@ export const whyChooseUsData = [
 export const testimonials = [
   {
     img: '/testimonial-1.jpg',
-    quote: "This company exceeded my expectations. Professional, efficient, and top-quality work for our required goods.",
-    name: 'Frank J',
-    role: 'AMD Inc.'
+    quote: "Working with Marlon has definitely been something great, something awesome, something new...",
+    name: 'Enrique L',
+    role: 'Transport 88',
+    vidId: 'VZw9aKby_Js'
   },
   {
     img: '/testimonial-2.jpg',
-    quote: "I was provided with a clear roadmap on how to start in this industry. Trustworthy and skilled team.",
-    name: 'Nick V',
-    role: 'Malika Inc.'
+    quote: "Some people get into this busines not knowing how to bid, not knowing where the good and bad areas are, he will cover all of that with you...",
+    name: 'Davo',
+    role: 'Start-Up',
+    vidId: 'MVIk2q9EKcs'
   },
   {
     img: '/testimonial-3.jpg',
-    quote: "Highly recommended! Seamless delivery at reasonable prices for my startup company",
-    name: 'Amelia W',
-    role: 'SE Restoration'
+    quote: "If you're looking for someone that can produce results that you can see, Marlon is the real deal...",
+    name: 'Vince',
+    role: 'Fleet Birds LLC',
+    vidId: '2fibWDQ9y1M'
   }
 ] as const;
