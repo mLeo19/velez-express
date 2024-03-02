@@ -22,7 +22,7 @@ const fadeInAnimationVariants = {
 };
 
 export default function Testimonials() {
-  const { ref } = useSectionInView("Testimonials", 0.5);
+  const { ref } = useSectionInView("Testimonials", 0.25);
 
   return (
     <motion.section

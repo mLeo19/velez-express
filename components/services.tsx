@@ -8,7 +8,7 @@ import { useSectionInView } from "@/lib/hooks";
 import Link from "next/link";
 
 export default function Services() {
-  const { ref } = useSectionInView("Services", 0.5);
+  const { ref } = useSectionInView("Services", 0.25);
 
   return (
     <section ref={ref} id="services" className="scroll-mt-28 mb-28">
