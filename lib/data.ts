@@ -147,8 +147,8 @@ export const testimonials = [
   {
     img: '/testimonial-2.jpg',
     quote: "Some people get into this busines not knowing how to bid, not knowing where the good and bad areas are, he will cover all of that with you...",
-    name: 'Davo',
-    role: 'Start-Up',
+    name: 'Rudy',
+    role: 'RLV Management LLC',
     vidId: 'MVIk2q9EKcs'
   },
   {
