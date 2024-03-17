@@ -15,6 +15,7 @@ import { Pricing } from "@/components/pricing"
 export default function Guide() {
   let heading = "Want to get started?"
   let title = "Learn With Our Complete Step-By-Step Guide"
+  let caption = "Once purchased, one of our specialists will contact you to discuss and solidify your business goals. You will also receive crucial connections to get started, such as dispatch companies and broker lists, while learning to use their own authority (MC & US DOT)."
   let features = [
     {
       title : "Comprehensive Learning Material",
@@ -27,8 +28,8 @@ export default function Guide() {
       icon : <MdBusinessCenter />
     },
     {
-      title : "Resource Optimization Tips",
-      description : "Maximize efficiency with tips on route planning, cargo handling, and fuel management",
+      title : "Grow your Network",
+      description : "Maximize efficiency with key connections such as dispatch companies and broker lists",
       icon : <FaShuttleVan />
     },
     {
@@ -41,7 +42,7 @@ export default function Guide() {
   let pricingHeading = "Simple no-tricks pricing"
   let pricingTitle = "Packed with step-by-step instructions, industry insights, and resource optimization tips, this guide is your roadmap to launching and growing a successful cargo van business"
   let pricingSubHeading = "Complete Step-By-Step Guide"
-  let pricingSubTitle = "Price reflects our mentorship price plus online payment fees"
+  let pricingSubTitle = "Buy once and own forever"
   let pricingFeatures = [
     {
       title: "Comprehensive Learning Material",
@@ -50,7 +51,7 @@ export default function Guide() {
       title: "Personalized Business Strategies"
     },
     {
-      title: "Resource Optimization Tips"
+      title: "Network Growth Resources"
     },
     {
       title: "Ongoing Support and Updates"
@@ -60,7 +61,7 @@ export default function Guide() {
 
   return (
     <div className="flex flex-col items-center px-4">
-      <ServiceHero heading={heading} title={title} features={features}/>
+      <ServiceHero heading={heading} title={title} caption={caption} features={features}/>
       <Pricing service="/guide" heading={pricingHeading} title={pricingTitle} subTitle={pricingSubTitle} subHeading={pricingSubHeading} features={pricingFeatures} price={price} beforeDiscount={null}/>
     </div>
   )

@@ -11,6 +11,7 @@ import  VideoPlayer from "@/components/video-player";
 export default function Mentorship() {
   let heading = "Get All The Necessary Guidance"
   let title = "Start Now With Our Mentorship Program Geared For You"
+  let caption = "Get immersed right away as we teach you how to build your business. Acquire your LLC, your EIN number, your business bank account, van insurance, and more! Maintain your vision with our weekly calls as we teach you about business credit, rates across states, and how to use your MC / US DOT."
   let features = [
     {
       title : "Personalized Guidance",
@@ -18,13 +19,13 @@ export default function Mentorship() {
       icon : <MdMenuBook />
     },
     {
-      title : "Continuous Skill Development",
-      description : "Monthly mentoring sessions covering various aspects of cargo van operations",
+      title : "Business Essentials",
+      description : "Learn how to legally operate your business and how to build a solid foundation",
       icon : <PiStudentBold />
     },
     {
       title : "Networking Opportunities",
-      description : "Connect with a network of fellow mentees for collaboration and shared insights",
+      description : "Connect with a network of fellow mentees and business partners for collaboration and shared insights",
       icon : <TbNetwork />
     },
     {
@@ -37,13 +38,13 @@ export default function Mentorship() {
   let pricingHeading = "Simple no-tricks pricing"
   let pricingTitle = " With tailored guidance, continuous skill development, networking opportunities, and exclusive resources, you'll navigate the road to success with confidence and expertise"
   let pricingSubHeading = "One-on-One Mentorship"
-  let pricingSubTitle = "Price reflects our mentorship price plus online payment fees"
+  let pricingSubTitle = "Your mentorship will last 90 days upon purchase"
   let pricingFeatures = [
     {
       title: "Personalized Guidance",
     },
     {
-      title: "Continuous Skill Development"
+      title: "Business Essentials"
     },
     {
       title: "Networking Opportunities"
@@ -56,7 +57,7 @@ export default function Mentorship() {
 
     return (
       <div className="flex flex-col items-center px-4">
-        <ServiceHero heading={heading} title={title} features={features}/>
+        <ServiceHero heading={heading} title={title} caption={caption} features={features}/>
         
         <Pricing service="/mentorship" heading={pricingHeading} title={pricingTitle} subTitle={pricingSubTitle} subHeading={pricingSubHeading} features={pricingFeatures} price={price} beforeDiscount={null}/>
       </div>

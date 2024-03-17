@@ -6,6 +6,7 @@ export type SectionName = (typeof links)[number]["name"];
 export type ServiceHeroProps = {
   heading: string;
   title: string;
+  caption: string;
   features: {
     title : string,
     description: string,

@@ -5,7 +5,7 @@ import { IconType } from 'react-icons';
 import { motion } from "framer-motion";
 import { ServiceHeroProps } from '@/lib/types';
 
-export default function ServiceHero({heading, title, features} : ServiceHeroProps) {
+export default function ServiceHero({heading, title, caption, features} : ServiceHeroProps) {
   return (
     <section className="mb-28 max-w-[50rem] text-center sm:mb-0 pt-28 sm:pt-36 ">
       <div className='mx-auto'>
@@ -28,7 +28,7 @@ export default function ServiceHero({heading, title, features} : ServiceHeroProp
           animate={{ opacity: 1, y: 0 }}
           className="mt-6 text-lg leading-8"
         >
-          Unlock Your Cargo Van Potential: Elevate your business with Marlon's Mentorship Program. Gain direct access to personalized guidance, industry insights, and a community of like-minded entrepreneurs, propelling your cargo van hustle to new heights.
+          {caption}
         </motion.p>
       </div>
       <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl flex justify-center items-center'>
