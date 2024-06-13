@@ -98,7 +98,7 @@ export const projectsData = [
       "Direct access to Marlon for tailored guidance, extensive skill development, elite networking opportunities, and more!",
     tags: ["24/7 Live Support", "Vip Mentorship", "Personalized Guidance"],
     imageUrl: privateMentorship,
-  },
+  },/*
   {
     title: "Test Product",
     href: "/test-product",
@@ -106,7 +106,7 @@ export const projectsData = [
       "Direct access to Marlon for tailored guidance, extensive skill development, elite networking opportunities, and more!",
     tags: ["24/7 Live Support", "Vip Mentorship", "Personalized Guidance"],
     imageUrl: privateMentorship,
-  },
+  },*/
 ] as const;
 
 
