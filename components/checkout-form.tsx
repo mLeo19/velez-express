@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import getStripe from "@/lib/get-stripejs";
 
 // import CustomDonationInput from "@/components/CustomDonationInput";
 // import StripeTestCards from "@/components/StripeTestCards";
@@ -8,11 +9,13 @@ import React, { useState } from "react";
 import { formatAmountForDisplay } from "@/lib/stripe-helpers";
 import * as config from "@/config";
 import { createCheckoutSession } from "@/actions/stripe";
+import { createCheckoutSession2 } from "@/actions/stripe";
 import { BsArrowRight } from "react-icons/bs";
 
 export default function CheckoutForm({price, service} : {price: number, service: string}): JSX.Element {
   const [loading] = useState<boolean>(false);
   let priceString = '$ ' + Math.round(price * 100) / 100;
+  const [clientSecret, setClientSecret] = useState<string | null>(null);
   /*const [input, setInput] = useState<{ customDonation: number }>({
     customDonation: Math.round(config.MAX_AMOUNT / config.AMOUNT_STEP),
   });*/
@@ -25,8 +28,16 @@ export default function CheckoutForm({price, service} : {price: number, service:
       [e.currentTarget.name]: e.currentTarget.value,
     });*/
 
+    // new approach with createCheckoutSession2
+
+    const formAction = async (data: FormData): Promise<void> => {
+      const { client_secret, url } = await createCheckoutSession2(data);
+  
+      window.location.assign(url as string);
+    };
+
   return (
-    <form action={createCheckoutSession} >
+    <form action={/*createCheckoutSession*/formAction} >
       {/* 
       <CustomDonationInput
         className="checkout-style"
