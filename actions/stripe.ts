@@ -65,7 +65,7 @@ export async function createCheckoutSession2(
     await stripe.checkout.sessions.create({
       mode: "payment",
       submit_type: "pay",
-      payment_method_types: ['card', 'afterpay_clearpay', 'cashapp', 'klarna'],
+      payment_method_types: ['card', 'afterpay_clearpay', 'cashapp'],
       shipping_address_collection: {
       // Specify which shipping countries Checkout should provide as options for shipping locations
         allowed_countries: ['AU', 'GB', 'NZ', 'US'],
