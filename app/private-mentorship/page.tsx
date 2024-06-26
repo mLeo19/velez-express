@@ -53,13 +53,13 @@ export default function Mentorship() {
       title: "Priority Resource Access"
     }
   ]
-  let price = 1300
+  let price = 1500
 
     return (
       <div className="flex flex-col items-center px-4">
         <ServiceHero heading={heading} title={title} caption={caption} features={features}/>
         
-        <Pricing service="/private-mentorship" heading={pricingHeading} title={pricingTitle} subTitle={pricingSubTitle} subHeading={pricingSubHeading} features={pricingFeatures} price={price} beforeDiscount={1500}/>
+        <Pricing service="/private-mentorship" heading={pricingHeading} title={pricingTitle} subTitle={pricingSubTitle} subHeading={pricingSubHeading} features={pricingFeatures} price={price} beforeDiscount={1700}/>
       </div>
     )
   }
