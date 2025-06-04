@@ -57,7 +57,7 @@ export default function Guide() {
       title: "Ongoing Support and Updates"
     }
   ]
-  let price = 580
+  let price = 700
 
   return (
     <div className="flex flex-col items-center px-4">

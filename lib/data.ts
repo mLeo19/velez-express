@@ -9,6 +9,7 @@ import completeGuide from "@/public/complete-guide.jpg";
 import mentorship from "@/public/mentorship.jpg";
 import shipping from "@/public/shipping.jpg";
 import privateMentorship from "@/public/private-mentorship.jpg"
+import goldMentorship from "@/public/gold-mentorship.jpg"
 import { BsFillCalendar2CheckFill } from "react-icons/bs";
 import { FaMoneyBill } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
@@ -82,7 +83,7 @@ export const projectsData = [
       "Acquire a comprehensive roadmap explaining how to succesfully compete in this industry and expand your network!",
     tags: ["One-Time Purchase", "Live Support", "Networking"],
     imageUrl: completeGuide,
-  },
+  },/*
   {
     title: "Mentorship",
     href: "/mentorship",
@@ -90,7 +91,7 @@ export const projectsData = [
       "Let us mentor you through every step of the way and gain access to 24/7 live support, one-on-one sessions, exclusive opportunities, and more!",
     tags: ["24/7 Live Support", "Networking", "Exclusive Offers"],
     imageUrl: mentorship,
-  },
+  },*/
   {
     title: "Private Mentorship",
     href: "/private-mentorship",
@@ -98,6 +99,14 @@ export const projectsData = [
       "Direct access to Marlon for tailored guidance, extensive skill development, elite networking opportunities, and more!",
     tags: ["24/7 Live Support", "Vip Mentorship", "Personalized Guidance"],
     imageUrl: privateMentorship,
+  },
+  {
+    title: "Gold Packet Mentorship",
+    href: "/gold-mentorship",
+    description:
+      "Gain lifetime access to 24/7 support, networking opportunities, assistance with personal credit, and more!",
+    tags: ["Lifetine Value", "Business & Credit", "Personalized Guidance"],
+    imageUrl: goldMentorship,
   },/*
   {
     title: "Test Product",

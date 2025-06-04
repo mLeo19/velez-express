@@ -9,17 +9,17 @@ import { MdMenuBook } from "react-icons/md";
 import  VideoPlayer from "@/components/video-player";
 
 export default function Mentorship() {
-  let heading = "VIP Mentorship"
-  let title = "Start Now With Our Private Mentorship Program"
+  let heading = "Lifetime Value Mentorship"
+  let title = "Enroll Now With Our GOLD Mentorship Program"
   let caption = "Go beyond a mentorship and let us work with you. Not only will you get all of our mentorship guidance, but we will dispatch for you until you gain traction on your own loads. Learn about direct shippers, load board usage & integration, and more! You will also receive personalized one-on-one meet-ups and gain direct contact to Marlon!"
   let features = [
     {
-      title : "Personalized Sessions",
+      title : "24/7 Access & In-Person Meetings",
       description : "Enjoy clear and constant contact with Marlon's one-on-one meetups and maximize your growth",
       icon : <MdMenuBook />
     },
     {
-      title : "Dispatch Opportunities",
+      title : "Access to Direct Shoppers & Platform of Drivers",
       description : "Receive qualified load opportunities from us to get started right away!",
       icon : <PiStudentBold />
     },
@@ -29,7 +29,7 @@ export default function Mentorship() {
       icon : <TbNetwork />
     },
     {
-      title : "Priority Resource Access",
+      title : "Assistance with Business & Personal Credit",
       description : "Gain first access to cutting-edge resources, tools, and insider information to stay ahead of the competition",
       icon : <HiMagnifyingGlassCircle />
     }
@@ -37,29 +37,29 @@ export default function Mentorship() {
 
   let pricingHeading = "Simple no-tricks pricing"
   let pricingTitle = " With tailored guidance, continuous skill development, networking opportunities, and exclusive resources, you'll navigate the road to success with confidence and expertise"
-  let pricingSubHeading = "Private VIP Mentorship"
-  let pricingSubTitle = "Your private mentorship will last 12 months upon purchase"
+  let pricingSubHeading = "Gold Package Mentorship"
+  let pricingSubTitle = "Your private mentorship has LIFETIME value"
   let pricingFeatures = [
     {
-      title: "Personalized Sessions",
+      title: "24/7 Access & In-Person Meetings",
     },
     {
-      title: "Dispatch Opportunities"
+      title: "Access to Direct Shoppers & Platform of Drivers"
     },
     {
       title: "Networking Opportunities"
     },
     {
-      title: "Priority Resource Access"
+      title: "Assistance with Business & Personal Credit"
     }
   ]
-  let price = 1550
+  let price = 2170
 
     return (
       <div className="flex flex-col items-center px-4">
         <ServiceHero heading={heading} title={title} caption={caption} features={features}/>
         
-        <Pricing service="/private-mentorship" heading={pricingHeading} title={pricingTitle} subTitle={pricingSubTitle} subHeading={pricingSubHeading} features={pricingFeatures} price={price} beforeDiscount={1700}/>
+        <Pricing service="/gold-mentorship" heading={pricingHeading} title={pricingTitle} subTitle={pricingSubTitle} subHeading={pricingSubHeading} features={pricingFeatures} price={price} beforeDiscount={2600}/>
       </div>
     )
   }
