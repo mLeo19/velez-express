@@ -174,5 +174,19 @@ export const testimonials = [
     name: 'Vince',
     role: 'Fleet Birds LLC',
     vidId: '2fibWDQ9y1M'
+  },
+  {
+    img: '/testimonial-1.jpg',
+    quote: "The experience has been such a good one; in my first month I was able to make a bit over $10,000...",
+    name: 'Roderick',
+    role: 'Gold VIP Mentee',
+    vidId: 'rdGlbHBbceQ'
+  },
+  {
+    img: '/testimonial-1.jpg',
+    quote: "Marlon is the man, he helped me with everything from A to Z...",
+    name: 'Christian',
+    role: 'Gold VIP Mentee',
+    vidId: 'swWqST8K_DI'
   }
 ] as const;
